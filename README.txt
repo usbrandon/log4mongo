@@ -12,8 +12,8 @@ Peter Monks (pmonks@gmail.com)
 Pre-requisites
 --------------
 JDK 1.6+
-MongoDB Server v1.0+ (tested with 1.2.1) (required for unit tests)
-MongoDB Java Driver v1.0+ (tested with 1.2)
+MongoDB Server v1.0+ (tested with 1.2.1, 1.4.x) (required for unit tests)
+MongoDB Java Driver v1.0+ (tested with 1.2, 1.4)
 Log4J 1.2+ (tested with 1.2.15 - note: won't work on earlier versions due to
             log4j API changes)
 
@@ -36,9 +36,6 @@ Installation / Configuration
 
 Todos
 -----
-* Confirm that dates are being written correctly.  They appear to be getting
-  converted to Strings (via Date.toString() - blech!!) before being written.
-
 * Clean up BSONification code - currently it's functional but skanky.
   Consider using daybreak for this [4].
 
