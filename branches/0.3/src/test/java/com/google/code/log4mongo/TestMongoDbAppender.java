@@ -88,6 +88,8 @@ public class TestMongoDbAppender
         throws Exception
     {
         super.tearDown();
+        // not really sure if this is the 'right way', however point is to proper cleanup database after test(s)
+        mongo.dropDatabase(TEST_DATABASE_NAME);
         mongo.getDB(TEST_DATABASE_NAME).requestDone();
     }
 
