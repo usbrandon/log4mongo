@@ -36,14 +36,13 @@ Installation / Configuration
 
 Todos
 -----
+* Add unit tests
+  * authentication
+  
 * Clean up BSONification code - currently it's functional but skanky.
   Consider using daybreak for this [4].
 
-* Add unit tests
-  * test contents of logged events, not just document counts
-  * authentication
-  * exceptions (including nested exceptions) are stored correctly
-
+  
 Notes on Date handling
 -----
 MongoDB (actually BSON) supports datetimes as a native data type [5] 
@@ -52,6 +51,7 @@ date type (java.util.Date in Java) to BSON representation of date in miliseconds
 since the Unix epoch. 
 However, MongoDB built-in console (bin/mongo) does represent dates formatted,
 even the dates were saved in native data type, which may be confusing [6].
+See testTimestampStoredNatively in tests (TestMongoDbAppender.java) if you want to get an idea.
 
 References
 ----------
